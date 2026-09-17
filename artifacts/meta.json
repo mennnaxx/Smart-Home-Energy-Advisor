@@ -1,0 +1,170 @@
+{
+  "feature_columns": [
+    "Outdoor Temperature (\u00b0C)",
+    "Household Size",
+    "Hour",
+    "Month",
+    "IsWeekend",
+    "Appliance Type_Computer",
+    "Appliance Type_Dishwasher",
+    "Appliance Type_Fridge",
+    "Appliance Type_Heater",
+    "Appliance Type_Lights",
+    "Appliance Type_Microwave",
+    "Appliance Type_Oven",
+    "Appliance Type_TV",
+    "Appliance Type_Washing Machine",
+    "Season_Spring",
+    "Season_Summer",
+    "Season_Winter",
+    "DayOfWeek_Monday",
+    "DayOfWeek_Saturday",
+    "DayOfWeek_Sunday",
+    "DayOfWeek_Thursday",
+    "DayOfWeek_Tuesday",
+    "DayOfWeek_Wednesday",
+    "power_max",
+    "available_duration",
+    "Auxiliary_Data_Available"
+  ],
+  "appliance_types": [
+    "Air Conditioning",
+    "Computer",
+    "Dishwasher",
+    "Fridge",
+    "Heater",
+    "Lights",
+    "Microwave",
+    "Oven",
+    "TV",
+    "Washing Machine"
+  ],
+  "seasons": [
+    "Fall",
+    "Spring",
+    "Summer",
+    "Winter"
+  ],
+  "days": [
+    "Friday",
+    "Monday",
+    "Saturday",
+    "Sunday",
+    "Thursday",
+    "Tuesday",
+    "Wednesday"
+  ],
+  "appliance_mapping": {
+    "Fridge": "fridge",
+    "Dishwasher": "dishwasher",
+    "Microwave": "micro_wave_oven",
+    "Air Conditioning": "air_conditioner",
+    "Computer": "computer",
+    "TV": "tv",
+    "Washing Machine": "washing_machine"
+  },
+  "power_max_median": 864.75,
+  "available_duration_median": 30.0,
+  "best_model_name": "Linear Regression",
+  "best_model_r2": 0.7575418828107178,
+  "model_comparison": {
+    "Linear Regression": {
+      "MAE": 0.476,
+      "RMSE": 0.584,
+      "R2": 0.7575
+    },
+    "Random Forest": {
+      "MAE": 0.4763,
+      "RMSE": 0.5849,
+      "R2": 0.7567
+    },
+    "XGBoost": {
+      "MAE": 0.4762,
+      "RMSE": 0.5851,
+      "R2": 0.7566
+    },
+    "Gradient Boosting": {
+      "MAE": 0.476,
+      "RMSE": 0.5841,
+      "R2": 0.7574
+    }
+  },
+  "season_temp_avg": {
+    "Fall": 14.934643970270919,
+    "Spring": 15.08836412870341,
+    "Summer": 14.915513097813026,
+    "Winter": 14.860997750642674
+  },
+  "appliance_peak_hour": {
+    "Heater": 16,
+    "Air Conditioning": 11,
+    "Computer": 15,
+    "Dishwasher": 11,
+    "Oven": 4,
+    "Microwave": 12,
+    "TV": 9,
+    "Washing Machine": 9,
+    "Lights": 5,
+    "Fridge": 1
+  },
+  "household_size_range": [
+    1,
+    5
+  ],
+  "appliance_aux_raw": {
+    "Fridge": {
+      "power_max": 864.75,
+      "available_duration": 30.0,
+      "Auxiliary_Data_Available": 1
+    },
+    "Oven": {
+      "power_max": 864.75,
+      "available_duration": 30.0,
+      "Auxiliary_Data_Available": 0
+    },
+    "Dishwasher": {
+      "power_max": 1806.0,
+      "available_duration": 30.0,
+      "Auxiliary_Data_Available": 1
+    },
+    "Heater": {
+      "power_max": 864.75,
+      "available_duration": 30.0,
+      "Auxiliary_Data_Available": 0
+    },
+    "Microwave": {
+      "power_max": 1757.0,
+      "available_duration": 30.0,
+      "Auxiliary_Data_Available": 1
+    },
+    "Air Conditioning": {
+      "power_max": 45.0,
+      "available_duration": 30.0,
+      "Auxiliary_Data_Available": 1
+    },
+    "Computer": {
+      "power_max": 280.0,
+      "available_duration": 30.0,
+      "Auxiliary_Data_Available": 1
+    },
+    "TV": {
+      "power_max": 54.0,
+      "available_duration": 30.0,
+      "Auxiliary_Data_Available": 1
+    },
+    "Washing Machine": {
+      "power_max": 2430.6666666666665,
+      "available_duration": 29.74,
+      "Auxiliary_Data_Available": 1
+    },
+    "Lights": {
+      "power_max": 864.75,
+      "available_duration": 30.0,
+      "Auxiliary_Data_Available": 0
+    }
+  },
+  "always_on_appliances": [
+    "Fridge"
+  ],
+  "days_per_month": 30
+}
