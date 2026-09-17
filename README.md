@@ -5,6 +5,7 @@ A machine learning project for predicting household energy consumption and turni
 ## Project Links
 
 Live Streamlit App: https://smart-home-energy-advisor-user-friendly.streamlit.app/
+
 Project Presentation: https://canva.link/rq90pt0v6y273sv
 
 
