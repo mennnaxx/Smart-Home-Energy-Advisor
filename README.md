@@ -58,6 +58,9 @@ Smart_Home_Energy_Project/
 
 ## Datasets
 
+Dataset Resources: https://drive.google.com/drive/folders/1Bb_KwOdWF0g67Afh9kjPefqMXP5no0A1?usp=drive_link
+
+
 The notebook combines three complementary datasets:
 
 **Dataset 1 — Smart Home Energy Consumption**
