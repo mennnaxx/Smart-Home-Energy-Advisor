@@ -6,8 +6,8 @@ st.set_page_config(page_title="Smart Home Energy Advisor", page_icon="⚡", layo
 
 st.markdown("""
 <style>
-    .stApp {
-        background-color: #e9f2ff;
+    .js-plotly-plot .plotly text {
+        fill: currentColor !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -113,6 +113,7 @@ if st.button("Calculate Energy Advisor Report", type="primary"):
         fig_donut.update_layout(
             margin=dict(t=10, b=10, l=10, r=10), height=340,
             showlegend=True, legend=dict(orientation="h", yanchor="bottom", y=-0.25),
+            paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
         )
         st.plotly_chart(fig_donut, use_container_width=True)
 
@@ -128,17 +129,20 @@ if st.button("Calculate Energy Advisor Report", type="primary"):
                 value=pct,
                 number={"suffix": "%"},
                 gauge={
-                    "axis": {"range": [0, max(150, pct + 10)]},
+                    "axis": {"range": [0, max(150, pct + 10)], "tickcolor": "#94a3b8"},
                     "bar": {"color": gauge_color},
                     "steps": [
-                        {"range": [0, 90], "color": "#eafaf1"},
-                        {"range": [90, 110], "color": "#fef5e7"},
-                        {"range": [110, max(150, pct + 10)], "color": "#fdedec"},
+                        {"range": [0, 90], "color": "rgba(46, 204, 113, 0.25)"},
+                        {"range": [90, 110], "color": "rgba(243, 156, 18, 0.22)"},
+                        {"range": [110, max(150, pct + 10)], "color": "rgba(231, 76, 60, 0.22)"},
                     ],
-                    "threshold": {"line": {"color": "black", "width": 3}, "thickness": 0.8, "value": 100},
+                    "threshold": {"line": {"color": "#6b7280", "width": 3}, "thickness": 0.8, "value": 100},
                 },
             ))
-            fig_gauge.update_layout(margin=dict(t=30, b=10, l=20, r=20), height=340)
+            fig_gauge.update_layout(
+                margin=dict(t=30, b=10, l=20, r=20), height=340,
+                paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
+            )
             st.plotly_chart(fig_gauge, use_container_width=True)
         else:
             st.info("Enter a monthly budget above to see budget usage, recommendations, and a what-if scenario.")
